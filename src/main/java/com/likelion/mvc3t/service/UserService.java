@@ -1,4 +1,4 @@
-package com.likelion.MVC3T.service;
+package com.likelion.mvc3t.service;
 
 public class UserService {
     private String Id;

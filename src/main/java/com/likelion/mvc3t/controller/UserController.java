@@ -1,10 +1,10 @@
-package com.likelion.MVC3T.controller;
+package com.likelion.mvc3t.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.likelion.MVC3T.service.UserService;
-import com.likelion.MVC3T.repository.UserRepository;
+import com.likelion.mvc3t.service.UserService;
+import com.likelion.mvc3t.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
