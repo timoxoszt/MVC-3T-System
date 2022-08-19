@@ -1,10 +1,10 @@
-package com.likelion.mvc3t;
+package com.likelion.MVC3T;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Mvc3tApplicationTests {
+class Mvc3TApplicationTests {
 
 	@Test
 	void contextLoads() {
