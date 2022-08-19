@@ -1,34 +1,28 @@
 package com.likelion.mvc3t.repository;
 
+import com.likelion.mvc3t.model.User;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
+import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.List;
+
+@Repository
+@Component
 public class UserRepository {
-    private String Id;
-    private String Ten;
-    private String Tuoi;
-    private String Sothich;
-
-    public UserRepository() {
-
+    ArrayList<User> users = new ArrayList<User>();
+    @PostConstruct
+    public void GenerateUser(){
+        users.add(new User("1", "Minh Tien", "20", "Java"));
+        users.add(new User("2", "Tien Minh", "21", "PHP"));
+        users.add(new User("3", "Vi Minh", "22", "Python"));
+        users.add(new User("4", "Tien Vi", "23", "Golang"));
+        users.add(new User("5", "Vi Tien", "24", "ASM"));
     }
 
-    public UserRepository(String Id, String Ten, String Tuoi, String Sothich) {
-        this.Id = Id;
-        this.Ten = Ten;
-        this.Tuoi = Tuoi;
-        this.Sothich = Sothich;
-    }
-
-    public String getId() {
-        return Id;
-    }
-    public String getTen() {
-        return Ten;
-    }
-
-    public String getTuoi() {
-        return Tuoi;
-    }
-
-    public String getSothich() {
-        return Tuoi;
+    public List<User> listUsers()
+    {
+        return users;
     }
 }
