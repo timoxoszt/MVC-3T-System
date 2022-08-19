@@ -8,18 +8,23 @@ import com.likelion.mvc3t.service.UserService;
 import com.likelion.mvc3t.repository.UserRepository;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 @Service
 @Component
 public class UserServiceImpl implements UserService {
+    ArrayList<User> users = new ArrayList<User>();
     @Autowired
-    private UserService userService;
+//    private UserService userService;
+    private UserRepository userRepository;
     @Override
     public void listUsers() {
+        ArrayList<User> users = (ArrayList<User>) userRepository.listUsers();
+        Collections.sort(users, Collections.reverseOrder());
     }
 
     @Override
     public User showUser(String id) {
-        return null;
+        return userRepository.showUser(id);
     }
 }
